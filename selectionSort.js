@@ -21,6 +21,7 @@ inside the loop initialise a variable minValIndex = current iteration index [i]
       swap => array[minValIndex] = array[i]
       swap => array[i] = temp
 return mutated array;
+***To avoid mutating the data the array can be copied by being sliced into another variable and that variable being sorted and returned, this would preserve the data which was originally passed to the array and make the function pure***
 */
 
 function selectionSort(array) {
