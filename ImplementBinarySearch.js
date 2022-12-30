@@ -34,7 +34,7 @@ return "Value not found";
 */
 
 function binarySearch(searchList, value) {
-  let arrayPath = [];
+  const arrayPath = [];
   let start = 0;
   let end = searchList.length - 1;
   let mid = Math.floor(end / 2);
