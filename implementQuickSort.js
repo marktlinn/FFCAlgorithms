@@ -25,19 +25,9 @@ function quickSort(arr) {
   let left = [];
   let right = [];
   for (const elem of arr.slice(0, arr.length - 1)) {
-    if (elem < pivot) {
-      left.push(elem);
-    } else {
-      right.push(elem);
-    }
+    elem < pivot ? left.push(elem) : right.push(elem);
   }
-  if (left.length >= 1 && right.length >= 1) {
-    return [...quickSort(left), pivot, ...quickSort(right)];
-  } else if (left.length >= 1) {
-    return [...quickSort(left), pivot];
-  } else {
-    return [pivot, ...quickSort(right)];
-  }
+  return [...quickSort(left), pivot, ...quickSort(right)];
 }
 
 console.log(quickSort([5, 2, 3, 1]));
